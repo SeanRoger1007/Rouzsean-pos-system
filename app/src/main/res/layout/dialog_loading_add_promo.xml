@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Promo Name (e.g. Go99)"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/edit_promo_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Go99"
+        android:inputType="text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cost to Deduct from Balance"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/edit_promo_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="99.00"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Price to Sell to Customer"
+        android:textSize="12sp" />
+    <EditText
+        android:id="@+id/edit_promo_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="102.00"
+        android:inputType="numberDecimal" />
+
+</LinearLayout>

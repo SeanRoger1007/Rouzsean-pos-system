@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="app_name">Rouzsean Point Of Sales</string>
+    <string name="action_settings">Settings</string>
+    <string name="total">Total</string>
+    <string name="barcode">Barcode</string>
+    <string name="cancel">Cancel</string>
+    <string name="clear">Clear</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">Done</string>
+    <string name="date">Date</string>
+    <string name="date_added">Date Added</string>
+    <string name="quantity">Quantity</string>
+    <string name="remove">Remove</string>
+    <string name="scan">Scan</string>
+    <string name="unit_price">Unit Price</string>
+    <string name="name">Name</string>
+    <string name="id">ID</string>
+    <string name="cash">Cash</string>
+    <string name="change">Change</string>
+    <string name="hint_search">Enter name or barcode</string>
+    <string name="hint_cash">Enter cash here</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="new_item">New Item</string>
+    <string name="add_stock">Add A Product Lot</string>
+    <string name="previous">&lt;</string>
+    <string name="next">></string>
+    <string name="inventory">Inventory</string>
+    <string name="sale">Sale</string>
+    <string name="report">Report</string>
+    <string name="menu">Menu</string>
+    <string name="sales">Sale</string>
+    <string name="receipt">Receipt</string>
+    <string name="shift">Shift</string>
+    <string name="items">Items</string>
+    <string name="settings">Settings</string>
+    <string name="store_overview">Store Overview</string>
+    <string name="owner">Owner: Rouzsean</string>
+    <string name="store">Store: Rouzsean Variety Store</string>
+    <string name="pos">POS: Rouzsean POS System</string>
+    <string name="rouzsean_use">Rouzsean Use</string>
+    <string name="loading">LOADING...</string>
+
+    <string name="store_capital">CASH REGISTER</string>
+    <string name="gcash_balance">GCASH BALANCE</string>
+    <string name="expense_income">Finance</string>
+    <string name="add_expense">ADD EXPENSE</string>
+    <string name="add_income">ADD INCOME</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="notes">Notes</string>
+    <string name="checkout_hint">press and hold to edit quantity and price</string>
+    <string name="question_mark">\?</string>
+    <string name="staff">Staff</string>
+    <string name="staff_today">STAFF TODAY</string>
+    <string name="worked_today">Worked Today</string>
+    <string name="salary">Salary</string>
+    <string name="theme">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="date_format">Date Format</string>
+    <string name="tap_to_view">Tap to view ➜</string>
+    <string name="tap_to_edit">Tap to edit ➜</string>
+    <string name="profit_report">PRODUCT PROFIT REPORT</string>
+    <string name="total_profit">TOTAL PROFIT</string>
+    <string name="printers">Printers</string>
+    <string name="no_printers">You have no printers yet</string>
+    <string name="connect_printer_hint">Here you can connect your receipt printer. &lt;u>&lt;font color=\"#2196F3\">Learn more&lt;/font>&lt;/u></string>
+    <string name="support">Support</string>
+    <string name="terms_of_use">Terms of use</string>
+    <string name="privacy_policy">Privacy policy</string>
+
+    <string name="receipt_address">Store Address</string>
+    <string name="receipt_phone">Phone Number</string>
+    <string name="hide_phone">Hide Phone in Receipt</string>
+
+    <string name="print">PRINT</string>
+    <string name="done">DONE</string>
+
+    <string name="dialog_quit">Are you sure you want to QUIT?</string>
+    <string name="dialog_remove_product">Are you sure you want to REMOVE this product?</string>
+    <string name="dialog_clear_sale">Are you sure you want to CLEAR this sale?</string>
+    <string name="hint_empty_sale">Sale is empty.</string>
+    <string name="quit">Quit</string>
+    <string name="no">No</string>
+    <string name="product_detail">Product Detail</string>
+    <string name="stock">Stock</string>
+    <string name="success">Success</string>
+    <string name="fail">Fail</string>
+    <string name="please_input_all">Please fulfill all data.</string>
+    <string name="need_money">Need</string>
+    <string name="zero">0</string>
+    <string name="save">SAVE</string>
+    <string name="placeholder_product_name">Product Name</string>
+
+    
+        
+    <string name="low_stock">Low Stock!</string>
+    <string name="low_stock_threshold">Low Stock Threshold</string>
+    <string name="default_low_stock_threshold">Default Low Stock Threshold</string>
+    <string name="settings_title">Inventory Settings</string>
+    <string name="low_stock_warning">⚠️ (Low Stock!)</string>
+    <string name="tag_icon">🏷️ </string>
+    <string name="placeholder_price">₱0.00</string>
+    <string name="placeholder_qty">Qty: 0</string>
+    <string name="placeholder_total">Total: ₱0.00</string>
+    <string name="all_items_caps">ALL ITEMS</string>
+    <string name="categories_caps">CATEGORIES</string>
+    <string name="sale_summary_caps">SALE SUMMARY</string>
+    <string name="daily_caps">DAILY</string>
+    <string name="weekly_caps">WEEKLY</string>
+    <string name="monthly_caps">MONTHLY</string>
+    <string name="today_caps">TODAY</string>
+    <string name="sale_caps">SALE</string>
+    <string name="expense_caps">EXPENSE</string>
+    <string name="income_caps">INCOME</string>
+    <string name="income_report">INCOME REPORT</string>
+    <string name="total_income">TOTAL INCOME</string>
+    <string name="stock_value_caps">STOCK VALUE</string>
+    <string name="cash_label">Cash: </string>
+    <string name="gcash_label">GCash: </string>
+    <string name="sold_price_label">Sold Price: </string>
+    <string name="profits_label">Profits: </string>
+    <string name="total_price_label">Total Price: </string>
+    <string name="icon_chart">📈</string>
+    <string name="icon_money">💸</string>
+    <string name="icon_box">📦</string>
+    <string name="icon_bank">🏛️</string>
+    <string name="icon_phone">📱</string>
+    <string name="icon_staff">👥</string>
+    <string name="graph_hint">Drag across to see details (X: Sales, Y: Revenue)</string>
+
+    <string name="lang_en">English</string>
+    <string name="lang_th">ภาษาไทย (th)</string>
+    <string name="lang_jp">日本語 (jp)</string>
+    <string name="hint_lang">Please restart the application to apply this language settings.</string>
+    
+    
+    <string-array name="period">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <style name="ButtonText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#000000</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+    </style>
+
+</resources>

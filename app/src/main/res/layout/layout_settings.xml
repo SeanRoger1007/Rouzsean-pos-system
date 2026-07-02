@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Printers Category -->
+        <LinearLayout
+            android:id="@+id/item_printers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/icon_printers"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_save"
+                android:tint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="@string/printers"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginLeft="64dp" />
+
+        <!-- General Category -->
+        <LinearLayout
+            android:id="@+id/item_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/icon_general"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_settings"
+                android:tint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="General"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- General Settings Container (Hidden by default) -->
+        <LinearLayout
+            android:id="@+id/container_general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="64dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_stock_threshold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_low_stock_threshold"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:id="@+id/input_threshold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:hint="e.g. 10"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/label_date_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/date_format"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="16dp"/>
+            <Spinner
+                android:id="@+id/spinner_date_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <TextView
+                android:id="@+id/label_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="16dp"/>
+            <FrameLayout
+                android:id="@+id/theme_toggle_container"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:clickable="true"
+                android:focusable="true">
+                <View
+                    android:id="@+id/toggle_track"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/theme_toggle_track" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/icon_sun"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_sun"
+                        android:padding="12dp"
+                        android:scaleType="centerInside" />
+                    <ImageView
+                        android:id="@+id/icon_moon"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_moon"
+                        android:padding="12dp"
+                        android:scaleType="centerInside" />
+                </LinearLayout>
+                <View
+                    android:id="@+id/toggle_thumb"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/theme_toggle_thumb" />
+                <FrameLayout
+                    android:id="@+id/active_icon_container"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp">
+                    <ImageView
+                        android:id="@+id/icon_sun_active"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_sun"
+                        android:padding="12dp"
+                        android:scaleType="centerInside"
+                        android:tint="#FFFFFF" />
+                    <ImageView
+                        android:id="@+id/icon_moon_active"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_moon"
+                        android:padding="12dp"
+                        android:scaleType="centerInside"
+                        android:tint="#FFFFFF"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginLeft="64dp" />
+
+        <!-- Receipt Category -->
+        <LinearLayout
+            android:id="@+id/item_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/icon_receipt"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_receipt"
+                android:tint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Receipt"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Receipt Settings Container -->
+        <LinearLayout
+            android:id="@+id/container_receipt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="64dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/label_receipt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receipt_address"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"/>
+            <EditText
+                android:id="@+id/input_receipt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/label_receipt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receipt_phone"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="16dp"/>
+            <EditText
+                android:id="@+id/input_receipt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:textSize="14sp"/>
+
+            <CheckBox
+                android:id="@+id/checkbox_hide_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hide_phone"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginLeft="64dp" />
+
+        <!-- Multi-Device Sync Category -->
+        <LinearLayout
+            android:id="@+id/item_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/icon_sync"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_popup_sync"
+                android:tint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Multi-Device Sync"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Sync Settings Container -->
+        <LinearLayout
+            android:id="@+id/container_sync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="64dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Device Role"
+                android:textColor="#3F51B5"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:layout_marginTop="8dp"/>
+
+            <Spinner
+                android:id="@+id/spinner_sync_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@android:drawable/btn_dropdown" />
+
+            <LinearLayout
+                android:id="@+id/layout_main_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Main Terminal IP (Give this to other devices)"
+                    android:textSize="11sp"
+                    android:textColor="#666666"/>
+                <TextView
+                    android:id="@+id/text_local_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.0.0.0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_secondary_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:visibility="gone">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Main Terminal IP Address"
+                    android:textSize="11sp"
+                    android:textColor="#666666"/>
+                <EditText
+                    android:id="@+id/input_server_ip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="e.g. 192.168.1.5"
+                    android:inputType="phone"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginLeft="64dp" />
+
+        <!-- Database Category -->
+        <LinearLayout
+            android:id="@+id/item_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+            <ImageView
+                android:id="@+id/icon_database"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_upload"
+                android:tint="#757575" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="Database &amp; Sync"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Database Settings Container -->
+        <LinearLayout
+            android:id="@+id/container_database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="64dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_export_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EXPORT/BACKUP DATA"
+                android:background="@drawable/btn_blue"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create a backup file to share with other devices."
+                android:textSize="10sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"/>
+
+            <Button
+                android:id="@+id/btn_import_db"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMPORT/RESTORE DATA"
+                android:background="@drawable/btn_yellow"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Warning: This will overwrite ALL existing data on this device."
+                android:textSize="10sp"
+                android:textColor="#FF5252"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginLeft="64dp" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="24dp"
+            android:text="@string/save"
+            android:background="@drawable/btn_green"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>

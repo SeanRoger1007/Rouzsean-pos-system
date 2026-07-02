@@ -1,0 +1,192 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- The main content view -->
+    <com.refresh.pos.ui.component.NonSwipeableViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- The navigation drawer -->
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/drawer_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/owner"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#E91E63" />
+
+        <TextView
+            android:id="@+id/drawer_store_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/store"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50" />
+
+        <TextView
+            android:id="@+id/drawer_pos_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/pos"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#2196F3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Navigation Buttons with Icons -->
+                <Button
+                    android:id="@+id/button_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/store_overview"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_overview"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_sales"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sale"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_sale"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_inventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/inventory"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_inventory"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_loading_station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Loading Station"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_receipt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/receipt"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_receipt"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_finance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/expense_income"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_finance"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_staff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/staff"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_staff"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/button_owner_use"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rouzsean_use"
+                    android:gravity="start|center_vertical"
+                    android:padding="12dp"
+                    android:drawableLeft="@drawable/ic_owner"
+                    android:drawablePadding="16dp"
+                    android:background="#00000000" />
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:background="#CCCCCC" />
+
+        <Button
+            android:id="@+id/button_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:drawableLeft="@drawable/ic_settings"
+            android:drawablePadding="16dp"
+            android:background="#00000000" />
+
+        <Button
+            android:id="@+id/button_support"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/support"
+            android:gravity="start|center_vertical"
+            android:padding="12dp"
+            android:drawableLeft="@drawable/ic_support"
+            android:drawablePadding="16dp"
+            android:background="#00000000" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
