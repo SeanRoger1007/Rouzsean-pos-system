@@ -1,73 +1,84 @@
-🛒 Rouzsean POS System
-A bespoke, high-performance Micro-Enterprise Point-of-Sale (POS) System engineered to streamline transactional workflows, retail logs, and live inventory management for independent operations.
+<div align="center">
+  <img src="app/src/main/res/drawable-hdpi/ic_launcher.png" alt="Rouzsean POS Logo" width="120" height="120" style="border-radius: 24px;" />
+  
+  # 🛒 Rouzsean POS System
 
-Built with a strict focus on data efficiency, zero-latency transaction speed, and a high-fidelity visual interface, this application replaces traditional, error-prone manual bookkeeping with a highly stable, automated local ledger engine.
+  A mobile/tablet Point of Sale (POS) application built for Android. Rouzsean POS streamlines retail and hospitality operations, offering portable transactions, real-time inventory tracking, and seamless device management directly from an Android device.
 
-📋 Project Overview
-The Rouzsean POS System is an offline-first transaction architecture designed to provide micro-commerce operators with enterprise-grade utility without the overhead of heavy cloud dependencies. It optimizes the checkout process through low-friction inventory lookups, instant tax/discount parsing, and secure local data persistence.
+  [![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
+  [![Language](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+  [![Language](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
+  [![IDE](https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=android-studio&logoColor=white)](https://developer.android.com/studio)
+</div>
 
-🎯 Key Engineering Objectives
-Domain Isolation: Built following strict clean-code methodologies—isolating business logic from external frameworks to ensure long-term maintainability.
+---
 
-Performance Stability: Optimized rendering pipelines to guarantee immediate user feedback during rapid item scanning and checkout procedures.
+## 🚀 Features
 
-Operational Accuracy: Eliminates accounting discrepancies through a centralized state engine handling monetary operations with precise rounding calculations.
+- **📱 Portable Checkout:** Fully responsive UI optimized for both Android smartphones and tablets.
+- **📷 Camera Barcode Scanning:** Utilize the device's built-in camera to quickly scan product barcodes and add items to the cart.
+- **🖨️ Thermal Printer Integration:** Supports receipt printing via Bluetooth, Wi-Fi, or USB connections to standard ESC/POS printers.
+- **📦 Local & Remote Inventory:** Real-time stock updates with offline caching support (never lose a sale during network drops).
+- **📊 Interactive Dashboard:** Visualized daily sales, top products, and transaction history directly on the device.
+- **🔒 Secure Access:** PIN-based login for Cashiers, Managers, and Admins to enforce role permissions.
 
-✨ Core Features
-⚡ High-Speed Checkout Engine: An intuitive layout allowing operators to search items by SKU, name, or category, update cart quantities rapidly, and compute totals in real-time.
+---
 
-📦 Live Inventory Controls: Automatic stock decrementing upon successful transactions, complete with low-stock alerts and manual restocking overrides.
+## 🛠️ Built With
 
-📊 Standalone Analytics Dashboard: Built-in summary tools compiling daily sales volume, revenue breakdown, and top-performing product categories.
+* **Languages:** **Kotlin** (Modern architecture & UI logic) & **Java** (Core systems / Legacy APIs)
+* **IDE:** **Android Studio**
+* **Database:** Room DB / SQLite *(or specify your remote API/Firebase backend here)*
+* **Architecture:** MVVM (Model-View-ViewModel)
 
-💾 Resilient Data Persistence: Local database storage architecture designed to secure transactional records even during sudden system power losses.
+---
 
-🎨 Fully Responsive UI: Tailored interface design optimized for touchscreens, mobile devices, tablets, and desktop setups.
+## 📸 App Preview
 
-🏗️ System Architecture & Stack
-Adhering to the core development mantra: “Depend inward. Isolate the domain. Let frameworks be plugins,” the system cleanly separates data boundaries from visual controls.
+| Login / Dashboard | Checkout & Cart |
+|---|---|
+| <img src="https://via.placeholder.com/280x560" width="280" alt="Dashboard Screen"/> | <img src="https://via.placeholder.com/280x560" width="280" alt="Checkout Screen"/> |
 
-Frontend Environment: React / Tailwind CSS (Utilizing Context API or lightweight atomic state hooks for localized transactional state retention).
+---
 
-Backend Framework / Engine: Spring Boot (Modular microservice structure for high-availability database processing) or localized Native Environment.
+## ⚙️ Getting Started
 
-Data Layer: Relational/SQLite database layer optimized for high-speed indexing of product tables and transaction timestamps.
+Follow these steps to get a local copy of the project up and running in Android Studio.
 
-🚀 Getting Started
-📋 Prerequisites
-Ensure your local development station has the necessary SDK runtimes installed:
+### 📋 Prerequisites
 
-Node.js (v18.x or higher)
+- **Android Studio** (Ladybug or newer recommended)
+- **Android SDK** (API Level 24 or higher)
+- **JDK 17** or higher
+- A physical Android device or Emulator configured in Android Studio
 
-Package Manager: npm or yarn
+### 🔧 Installation & Setup
 
-Backend Runtime: Java JDK 17+ (If running a Java/Spring enterprise core)
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/SeanRoger1007/Rouzsean-pos-system.git](https://github.com/SeanRoger1007/Rouzsean-pos-system.git)
+   Open the Project:
+   Downloadable Contents:
+   1. Github: https://github.com/SeanRoger1007/Rouzsean-pos-system
+   2. APK: https://drive.google.com/drive/u/1/folders/1TIiiORVNyprHpOgFst1h9bDJM6J2Hsdh
+2. Download and Launch Android Studio.
+3. Click on Open an Existing Project.
+4. Navigate to the directory where you cloned Rouzsean-pos-system and select it.
+5. Sync Gradle & Wait for Android Studio to finish indexing and downloading required dependencies.
+6. Run the App
 
-🔧 Installation and Bootstrapping
-Clone the repository instance:
-
-Bash
-git clone https://github.com/SeanRoger1007/Rouzsean-pos-system.git
-cd Rouzsean-pos-system
-Initialize and setup UI environments:
-
-Bash
-cd frontend
-npm install
-Configure Environment Variables:
-Create a .env file within the application root directory to assign local configurations:
-
-Code snippet
-PORT=3000
-DATABASE_URL=./data/rouzsean_pos.db
-PRODUCTION_MODE=true
-Launch the development application server:
-
-Bash
-npm run dev
-🛠️ Roadmap & Future Enhancements
-[ ] Barcode Integration: Hooking into device camera hardware for automatic item population via camera computer-vision pipelines.
-
-[ ] Automated Receipts: Localized receipt compilation exporting straight to thermal hardware prints or PDF sharing modules.
-
-[ ] Data Export Pipelines: Enabling CSV/Excel ledger exports for simple external spreadsheet reviews.
+## 📁 Project Structure
+  ```bash
+Rouzsean-pos-system/
+├── app/
+│   ├── src/
+│   │   ├── main/
+│   │   │   ├── java/com/rouzsean/pos/    # Java & Kotlin Source Files
+│   │   │   │   ├── data/                 # Models, Repositories, Local DB
+│   │   │   │   ├── ui/                   # Activities, Fragments, ViewModels
+│   │   │   │   └── utils/                # Printer helpers, Barcode scanners
+│   │   │   ├── res/                      # Layout XMLs, Drawables, Strings
+│   │   │   └── AndroidManifest.xml       # App Permissions & Components
+│   └── build.gradle.kts                  # App-level build configurations
+├── gradle/                               # Gradle wrapper files
+└── build.gradle.kts                      # Project-level build configurations
