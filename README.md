@@ -35,9 +35,17 @@
 
 ## 📸 App Preview
 
-| Login / Dashboard | Checkout & Cart |
-|---|---|
-| <img src="https://via.placeholder.com/280x560" width="280" alt="Dashboard Screen"/> | <img src="https://via.placeholder.com/280x560" width="280" alt="Checkout Screen"/> |
+| Store Overview | Sale Page |
+| :---: | :---: |
+| <img src="./preview/Store_Overview.jpg" width="300" alt="Store Overview Screen"/> | <img src="./preview/Sale_Page.jpg" width="300" alt="Sale Page Screen"/> |
+
+| Checkout | Receipt |
+| :---: | :---: |
+| <img src="./preview/Checkout.jpg" width="300" alt="Checkout Screen"/> | <img src="./preview/Receipt.jpg" width="300" alt="Receipt Screen"/> |
+
+| Income Report | Expense Report |
+| :---: | :---: |
+| <img src="./preview/Income_Report.jpg" width="300" alt="Income Report Screen"/> | <img src="./preview/Expense_Report.jpg" width="300" alt="Expense Report Screen"/> |
 
 ---
 
