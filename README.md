@@ -28,7 +28,7 @@
 
 * **Languages:** **Kotlin** (Modern architecture & UI logic) & **Java** (Core systems / Legacy APIs)
 * **IDE:** **Android Studio**
-* **Database:** Room DB / SQLite *(or specify your remote API/Firebase backend here)*
+* **Database:** Room DB / SQLite 
 * **Architecture:** MVVM (Model-View-ViewModel)
 
 ---
